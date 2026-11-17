@@ -1,0 +1,23 @@
+subscription_id = "REPLACE_UAT_SUBSCRIPTION_ID"
+resource_group_name = "azhrc-turtle8-core-rg"
+vnet_resource_group_name = "azhrc-turtle8-rg"
+virtual_network_name = "azhrc-turtle8-vnet"
+aks_subnet_name = "azhrc-gturtle8-core-aks"
+aks_identity_resource_group_name = "azhrc-turtle8-infra-rg"
+aks_identity_name = "azhrc-turtle8-rbac-mi"
+aks_cluster_name = "REPLACE_NEW_UAT_AKS_CLUSTER_NAME"
+aks_dns_prefix = "REPLACE_NEW_UAT_DNS_PREFIX"
+kubernetes_version = null # Select approved supported version before production
+node_count = 2
+node_vm_size = "Standard_D4as_v7"
+availability_zones = []
+pod_cidr = "10.244.0.0/16"
+service_cidr = "10.240.0.0/16"
+dns_service_ip = "10.240.0.10"
+connected_network_cidrs = []
+outbound_type = "loadBalancer"
+udr_egress_ready = false
+create_aks_network_role_assignment = false # Set true only if Terraform identity can assign roles; otherwise preassign Network Contributor to AKS MI
+create_aks_route_table_role_assignment = false
+admin_group_object_ids = []
+tags = { Application = "platform-admin", Owner = "HighRadius" }
